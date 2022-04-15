@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.background-image{
+    background-image: url('https://cdn.pixabay.com/photo/2015/05/29/19/17/study-789631_960_720.jpg');
+    background-attachment:fixed;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:600px;
+}
