@@ -12,11 +12,11 @@ class HttpRedirect
     public function handle(Request $request, Closure $next)
     {
         //Rdirects HTTP request to HTTPS
-        if (!$request->secure() && App::environment('production')) {
+       /* if (!$request->secure() && App::environment('production')) {
                 return redirect()->secure($request->getRequestUri(), 301);
-        }
+        } */
 
-        return $next($request);
+        return $next($request); 
     }
 
 }

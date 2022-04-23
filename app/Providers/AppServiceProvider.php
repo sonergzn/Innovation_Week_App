@@ -17,6 +17,7 @@ use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Log;
+use PhpParser\Node\Stmt\If_;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,7 +28,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       //
+        /*if(env('APP_ENV') == 'local'){
+            $this->app['request']->server->set('HTTP', true);
+        } */
+        URL::forceScheme('http');
     }
 
     /**
@@ -37,9 +41,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        If(env('APP_ENV') !== 'local') {
+        if(env('APP_ENV') !== 'local') {
             $this->app['request']->server->set('HTTPS', true);
         } 
+        //URL::forceScheme('http');
         Schema::defaultStringLength(191); 
 
     }
