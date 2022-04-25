@@ -20,6 +20,7 @@
                         </form>
                         <br>
                         <table class="table-auto w-full">
+                            
                             <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                             <tr>
                                 <th class="p-2 whitespace-nowrap">
