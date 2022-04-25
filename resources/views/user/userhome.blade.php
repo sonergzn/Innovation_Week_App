@@ -38,7 +38,7 @@
 
         </div>
         <?php $name = Auth::user()->name; ?>
-        <img accept=".png, .jpg, .jpeg" src="{{asset('images/' . $post->image_path) }}" class="rounded-full h-14 w-14 flex items-center md:float-center" /> <br>
+        <img alt="image" accept=".png, .jpg, .jpeg" src="{{asset('images/' . $post->image_path) }}" class="rounded-full h-14 w-14 flex items-center md:float-center" /> <br>
         <p class="text-lg font-semibold"> Created at: {{$post->created_at}} </p>
         <p class="text-lg font-semibold"> Updated at: {{$post->updated_at}} </p>
         <p class="text-lg font-semibold"> User Id: {{$post->author_id}}</p>
