@@ -41,12 +41,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if(env('APP_ENV') !== 'local') {
+        /*if(env('APP_ENV') !== 'local') {
             $this->app['request']->server->set('HTTPS', true);
         } 
         //URL::forceScheme('http');
         Schema::defaultStringLength(191);
-        //Extra commit
+        //Extra commit */
 
     }
 }
