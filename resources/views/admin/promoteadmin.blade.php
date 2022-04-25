@@ -23,19 +23,19 @@
                                 <div class="form-group"> <b><label for="ID" class="text-gray-700">ID: </label></b>
                                     <input type="hidden" name="id" value="{{$user->id}}" />
                                     <input class="border-2 border-gray-300 p-2" readonly="readonly" disabled type="numeric" class="form-control" id="id" name="id" value="{{$user->id}}"> </div>
-                                <div class="form-group mt-4"> <b><label for="UserName" class="text-gray-700"> Username: </label></b>
+                                <div class="form-group mt-4"> <strong><label for="UserName" class="text-gray-700"> Username: </label></strong>
                                     <input class="border-2 border-gray-300 p-2" disabled type="text" class="form-control" id="username" name="username" value="{{$user->name}}"> <span style="color: red">@error('username'){{$message}}@enderror</span>
                                     <br> </div>
                                 <div class="form-group mt-4"> <b><label for="email" class="text-gray-700">E-mail: </label></b>
                                     <input class="border-2 border-gray-300 p-2" disabled type="email" class="form-control" id="email" name="email" value="{{$user->email}}"> <span style="color: red">@error('email'){{$message}}@enderror</span>
                                     <br> </div> @if ($user->id == Auth::user()->id)
-                                    <div class="form-group mt-4"> <b><label for="isadmin" class="text-gray-700">Role: </label></b>
+                                    <div class="form-group mt-4"> <strong><label for="isadmin" class="text-gray-700">Role: </label></strong>
                                         <select disabled class="form-control" name="admin" id="admin">
                                             <option name="isadminyes" value="1">ADMIN</option>
                                             <option name="isadminno" value="0">USER</option>
                                         </select> <span style="color: red">@error('isadmin'){{$message}}@enderror</span>
                                         <br> </div> @else
-                                    <div class="form-group"> <b><label for="isadmin" class="text-gray-700">Role: </label></b>
+                                    <div class="form-group"> <strong><label for="isadmin" class="text-gray-700">Role: </label></strong>
                                         <select class="form-control" name="isadmin" min="0" max="1" name="admin" id="admin" value={{$user->isadmin ? 'Yes' : 'No'}}>
                                             <option name="isadmin" value="1">ADMIN</option>
                                             <option name="isadmin" value="0">USER</option>
@@ -48,7 +48,7 @@
                         <br>
                         <hr>
                         <h1 class="text-xl text-gray-600">Posts from the User {{$user->name}}</h1>
-                        <p><b class="text-gray-700">Total Posts: </b>{{count($user->posts)}} </p>
+                        <p><strong class="text-gray-700">Total Posts: </strong>{{count($user->posts)}} </p>
                         <div class="py-12">
                             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> @foreach ($user->posts as $post)
                                     <div class="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 gap-4 mt-8 mb-8">
