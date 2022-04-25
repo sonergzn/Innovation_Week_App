@@ -20,7 +20,7 @@
                         </form>
                         <br>
                         <table class="table-auto w-full">
-                            
+                            <caption>Table for admin</caption>
                             <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                             <tr>
                                 <th class="p-2 whitespace-nowrap">
