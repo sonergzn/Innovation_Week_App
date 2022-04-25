@@ -45,7 +45,8 @@ class AppServiceProvider extends ServiceProvider
             $this->app['request']->server->set('HTTPS', true);
         } 
         //URL::forceScheme('http');
-        Schema::defaultStringLength(191); 
+        Schema::defaultStringLength(191);
+        //Extra commit
 
     }
 }
