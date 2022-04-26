@@ -28,7 +28,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-         
+        if(config('app.env') === 'production') {
+            URL::forceScheme('http');
+        }
         //URL::forceScheme('http');
     }
 
