@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+  labels:
+    app: blogapp
+spec:
+  ports:
+  - port: 80
+    targetPort: http-web-svc
+  selector:
+    app: blogapp
+  type: LoadBalancer
