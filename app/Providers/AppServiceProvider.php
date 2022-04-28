@@ -34,8 +34,8 @@ class AppServiceProvider extends ServiceProvider
         /*If (env('APP_ENV') !== 'local') {
             $this->app['request']->server->set('HTTPS', true);
         }*/
-        //URL::forceScheme('http');
-        
+        //URL::forceScheme('http'); ##
+
     }
 
     /**
