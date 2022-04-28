@@ -31,6 +31,9 @@ class AppServiceProvider extends ServiceProvider
         if(config('app.env') === 'production') {
             URL::forceScheme('https');
         }
+        /*If (env('APP_ENV') !== 'local') {
+            $this->app['request']->server->set('HTTPS', true);
+        }*/
         //URL::forceScheme('http');
     }
 
@@ -41,11 +44,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*if(env('APP_ENV') !== 'local') {
-            $this->app['request']->server->set('HTTPS', true);
-        }
-        if(env('APP_ENV') == 'local'){
+        if(env('APP_ENV') === 'local') {
             $this->app['request']->server->set('HTTPS', false);
+        }
+        /*if(env('APP_ENV') === 'production'){
+            $this->app['request']->server->set('HTTPS', true);
         }*/
         Schema::defaultStringLength(191);
         
