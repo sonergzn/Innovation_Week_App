@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: blogapp
-        image: blogapp:latest
+        image: blogapp:#{Build.BuildId}#
         ports:
         - containerPort: 80
