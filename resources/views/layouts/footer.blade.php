@@ -37,5 +37,5 @@
         </div>
 
     </div>
-        <li class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">&copy; Copyright 2021 - All rights reserved                                <a href="{{route('privacy')}}">Privacy Policy</li>
+        <li class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">&copy; Copyright 2021 - All rights reserved                                <a href="{{route('privacy')}}">Privacy Policy......</li>
 </footer>
